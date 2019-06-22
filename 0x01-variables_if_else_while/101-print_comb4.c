@@ -12,7 +12,7 @@ int bc;
 int cd;
 for (ab = 48 ; ab <= 55 ; ab++)
 {
-for (bc = 49 ; bc <= 56 ; bc++)
+for (bc = ab + 1 ; bc <= 56 ; bc++)
 {
 for (cd = bc + 1; cd <= 57; cd++)
 {
