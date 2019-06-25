@@ -16,4 +16,5 @@ putchar('t');
 putchar('o');
 putchar('n');
 putchar('\n');
+return (0);
 }
