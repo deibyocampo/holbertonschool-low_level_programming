@@ -1,4 +1,3 @@
-#include <stdio.h>
 #include "holberton.h"
 /**
  * main - Entry point
@@ -12,6 +11,6 @@ int main (void)
     {
       _putchar(letras);
     }
-  _putchar(letras);
+  _putchar("\n");
 return (0);
 }
