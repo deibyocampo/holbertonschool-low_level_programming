@@ -1,4 +1,5 @@
 #include "holberton.h"
+
 /**
  * main - Entry point
  *
@@ -16,5 +17,5 @@ _putchar('t');
 _putchar('o');
 _putchar('n');
 _putchar('\n');
-_return (0);
+return (0);
 }
