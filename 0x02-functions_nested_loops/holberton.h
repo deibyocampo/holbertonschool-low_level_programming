@@ -1,5 +1,6 @@
 #ifndef _SAMPLE_HEADER_H_
 #define _SAMPLE_HEADER_H_
+int print_last_digit(int);
 int _abs(int);
 int print_sign(int n);
 int _isalpha(int c);
