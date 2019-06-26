@@ -9,20 +9,12 @@
  */
 int _abs(int r)
 {
-if (r == -1)
+if (r > 0)
 {
-return (1);
-}
-else if (r == 0)
-{
-return (0);
-}
-else if (r == 1)
-{
-return (1);
+return (r);
 }
 else
 {
-return (98);
+return (-r);
 }
 }
