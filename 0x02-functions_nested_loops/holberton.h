@@ -1,5 +1,6 @@
 #ifndef _SAMPLE_HEADER_H_
 #define _SAMPLE_HEADER_H_
+void print_to_98(int n);
 int add(int, int);
 void times_table(void);
 void jack_bauer(void);
