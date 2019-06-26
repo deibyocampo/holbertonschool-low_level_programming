@@ -2,7 +2,7 @@
 /**
  * print_last_digit - find the absolute value of an integer.
  *
- * @r: the caracter to print.
+ * @t: the caracter to print.
  *
  * Return: returns the numerical value of whether it is positive or negative.
  */

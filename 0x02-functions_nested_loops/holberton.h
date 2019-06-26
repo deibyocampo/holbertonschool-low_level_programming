@@ -1,5 +1,6 @@
 #ifndef _SAMPLE_HEADER_H_
 #define _SAMPLE_HEADER_H_
+void times_table(void);
 void jack_bauer(void);
 int print_last_digit(int);
 int _abs(int);
