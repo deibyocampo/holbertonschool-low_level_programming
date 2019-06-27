@@ -2,12 +2,12 @@
 /**
  * mul - multiply two integers and show results.
  *
- * @a:
- * @b: 
+ * @a: the character to print.
+ * @b: the character to print.
  *
- * Return: 
+ * Return: returns the multiplication result.
  */
 int mul(int a, int b)
 {
-  return (a * b);
+return (a * b);
 }
