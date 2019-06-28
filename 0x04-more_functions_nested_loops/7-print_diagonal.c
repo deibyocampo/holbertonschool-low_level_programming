@@ -4,7 +4,7 @@
  *
  * @n: the character to print.
  *
- * Return: print the space. 
+ * Return: print the space.
  */
 void print_diagonal(int n)
 {
