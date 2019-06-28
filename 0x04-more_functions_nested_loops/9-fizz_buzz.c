@@ -1,28 +1,49 @@
+#include "holberton.h"
 #include <stdio.h>
 /**
- * main - check the code for Holberton School students.
- * 
- * Return: Always 0.
+ * fizzbuzz - Short description
+ *
+ * Description: print all number to one hundred
+ *
+ * Return: 0
+ */
+void fizzbuzz(void)
+{
+int i;
+for (i = 1; i <= 100; i++)
+{
+if (i % 3 == 0 && i % 5 == 0)
+{
+printf("FizzBuzz ");
+}
+else if (i % 3 == 0 && i % 5 != 0)
+{
+printf("Fizz ");
+}
+else if (i % 3 != 0 && i % 5 == 0)
+{
+if (i == 100)
+{
+printf("Buzz");
+}
+else
+printf("Buzz ");
+}
+else
+{
+printf("%d ", i);
+}
+}
+printf("\n");
+}
+/**
+ * main - short description
+ * Description: print all numbers to hundred
+ *
+ * Return: success
  */
 int main(void)
 {
-  int a;
-  
-  for (a = 1; a <= 100; a++)
-    {
-      if (a > 9)
-	{
-	  putchar(48 + (a / 10));
-	}
-      putchar(48 + (a % 10));
-      if ((a % 3) = 0 &&  0 = (a % 5))
-	{
-	  putchar(a + '0');
-	  putchar(' ');
-          putchar('FizzBuzz');
-          putchar(' ');
-	}
-    }
-  putchar('\n');
+fizzbuzz();
 return (0);
 }
