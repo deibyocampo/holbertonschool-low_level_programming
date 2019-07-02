@@ -1,5 +1,6 @@
 #ifndef _SAMPLE_HEADER_H_
 #define _SAMPLE_HEADER_H_
+void puts2(char *str);
 void rev_string(char *s);
 void print_rev(char *s);
 void _puts(char *str);
