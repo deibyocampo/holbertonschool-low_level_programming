@@ -18,8 +18,6 @@ while (c < n)
 printf("%d", a[c]);
 if (c < n - 1)
 printf(", ");
-else
-printf(" ");
 c++;
 }
 printf("\n");
