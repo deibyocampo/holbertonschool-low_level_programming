@@ -1,5 +1,6 @@
 #ifndef _SAMPLE_HEADER_H_
 #define _SAMPLE_HEADER_H_
+char *rot13(char *);
 char *leet(char *);
 char *cap_string(char *);
 char *string_toupper(char *);
