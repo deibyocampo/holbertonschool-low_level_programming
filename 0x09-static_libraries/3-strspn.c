@@ -1,20 +1,32 @@
 #include "holberton.h"
 /**
- * *_strcmp - function to print a string of characters.
+ * _strspn - alculates the length (in bytes).
  *
- * @s1: string 1.
+ * @s: pointer.
+ * @accept: pointers.
  *
- * @s2: string 2.
- * Return: character string.
+ * Return: the number of bytes in the initial.
  */
-int _strcmp(char *s1, char *s2)
+unsigned int _strspn(char *s, char *accept)
 {
-	while ((*s1 != '\0') || (*s2 != '\0'))
+	int a;
+	int b;
+	int c;
+
+	c = 0;
+
+	for (a = 0; s[a] != '\0'; a++)
 	{
-		if (*s1 != *s2)
-			return (*s1 - *s2);
-		s1++;
-		s2++;
+		for (b = 0; accept[b] != '\0'; b++)
+		{
+			if (s[a] == accept[b])
+			{
+				c++;
+				break;
+			}
+		}
+		if (accept[b] == '\0')
+			break;
 	}
-	return (0);
+	return (c);
 }

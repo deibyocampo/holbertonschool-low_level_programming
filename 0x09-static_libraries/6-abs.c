@@ -2,19 +2,19 @@
 /**
  * _abs - find the absolute value of an integer.
  *
- * @r: the caracter to print.
+ * @n: the caracter to print.
  *
  * Return: returns the absolute value of an integer regardless
  * of whether it is positive or negative.
  */
-int _abs(int r)
+int _abs(int n)
 {
-	if (r > 0)
+	if (n > 0)
 	{
-		return (r);
+		return (n);
 	}
 	else
 	{
-		return (-r);
+		return (-n);
 	}
 }
