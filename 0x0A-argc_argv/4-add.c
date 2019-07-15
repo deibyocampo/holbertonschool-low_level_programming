@@ -1,39 +1,40 @@
 #include <stdio.h>
 #include <stdlib.h>
+
 /**
- * main - is a function returning an integer.
+ *main - calculates the sum of the given integers from,
+ *the command line
  *
- * @argc: argument count.
+ *@argc: The amount of arguments in the command line
  *
- * @argv: argument vector.
+ *@argv: A double pointer pointing to the strings in the
+ *command line
  *
- * Return: 0.
+ *Return: returns 0 if program is successful, else it returns 1
  */
 int main(int argc, char *argv[])
 {
-	int a;
-	int b;
+	int i;
+	int j;
 	int sum;
 
 	sum = 0;
-
-	if (argc < 3)
+	if (argc < 1)
 	{
-		printf("%d\n", 0);
+		printf("0\n");
 		return (1);
 	}
-
-	for (a = 1; a < argc; a++)
+	for (i = 1; i < argc; i++)
 	{
-		for (b = 0; argv[a][b] != '\0'; b++)
+		for (j = 0; argv[i][j] != '\0'; j++)
 		{
-			if (argv[a][b] < '0' || argv[a][b] > '9')
+			if (argv[i][j] < '0' || argv[i][j] > '9')
 			{
 				printf("Error\n");
-				return (0);
+				return (1);
 			}
 		}
-		sum += atoi(argv[a]);
+		sum += atoi(argv[i]);
 	}
 	printf("%d\n", sum);
 	return (0);
