@@ -2,16 +2,15 @@
 #include <stdlib.h>
 #include <string.h>
 #include <ctype.h>
+
 /**
- *main - calculates the sum of the given integers from,
- *the command line
+ * main - is a function returning an integer.
  *
- *@argc: The amount of arguments in the command line
+ * @argc: argument count.
  *
- *@argv: A double pointer pointing to the strings in the
- *command line
+ * @argv: argument vector.
  *
- *Return: returns 0 if program is successful, else it returns 1
+ * Return: 0 1.
  */
 int main(int argc, char *argv[])
 {
