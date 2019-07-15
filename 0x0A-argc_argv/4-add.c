@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
-
+#include <string.h>
+#include <ctype.h>
 /**
  *main - calculates the sum of the given integers from,
  *the command line
@@ -24,7 +25,7 @@ int main(int argc, char *argv[])
 	{
 		for (j = 0; argv[i][j] != '\0'; j++)
 		{
-			if (argv[i][j] < '0' || argv[i][j] > '9')
+			if (!(isdigit(argv[i][j])))
 			{
 				printf("Error\n");
 				return (1);
