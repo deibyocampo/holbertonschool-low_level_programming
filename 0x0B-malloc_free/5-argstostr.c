@@ -1,42 +1,47 @@
 #include <stdlib.h>
 #include "holberton.h"
 /**
- * *argstostr - concatenates all arguments in the program.
+ * *argstostr - Funtion that return a pointer.
  *
- * @ac: concantenates all arguments in the program.
+ * @ac: The number of arguments.
  *
- * @av: a double pointer.
+ * @av: The string of arguments.
  *
- * Return: concatenates string followed by a line break.
+ * Return: ar.
  */
 char *argstostr(int ac, char **av)
 {
-	char *strn;
-	int a = 0, v, x = 0, ls;
+	int i;
+	int j = 0;
+	int z;
+	int k = 0;
+	int tot;
+	char *m;
 
-	for (a = 0; a < ac; a++)
+	if (ac == 0 || av == NULL)
+		return (NULL);
+	for (i = 0; i < ac; i++)
 	{
-		for (v = 0; av[a][v]; v++)
+		for (z = 0; av[i][z] != '\0'; z++)
 		{
-			x++;
+			j++;
 		}
-		x++;
+		j++;
 	}
-	strn = malloc((x + 1) * (sizeof(char)));
-	ls = 0;
-	for (a = 0; a < ac; a++)
+	tot = j + 1;
+	m = malloc(sizeof(char) * (tot));
+	if (m == NULL)
+		return (NULL);
+	for (i = 0; i < ac; i++)
 	{
-		for (v = 0; av[a][v]; v++)
+		for (j = 0; av[i][j] != '\0'; j++)
 		{
-			strn[ls] = av[a][v];
-			ls++;
+			m[k] = av[i][j];
+			k++;
 		}
-		if (av[a][v] == '\0')
-		{
-			strn[ls] = '\n';
-			ls++;
-		}
+		m[k] = '\n';
+		k++;
 	}
-	strn[ls + 1] = '\0';
-	return (strn);
+	m[k] = '\0';
+	return (m);
 }
