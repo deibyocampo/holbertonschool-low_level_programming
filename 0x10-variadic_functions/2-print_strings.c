@@ -14,9 +14,9 @@ void print_strings(const char *separator, const unsigned int n, ...)
 	char *mm;
 	va_list argum;
 
+	va_start(argum, n);
 	if (separator != NULL && n != 0)
 	{
-		va_start(argum, n);
 		for (a = 0; a < n; a++)
 		{
 			mm = va_arg(argum, char *);
