@@ -11,24 +11,33 @@
 void print_strings(const char *separator, const unsigned int n, ...)
 {
 	unsigned int a;
-	char *mm;
+	char *m;
 	va_list argum;
 
 	va_start(argum, n);
-	if (separator != NULL && n != 0)
+	if (separator == NULL)
 	{
 		for (a = 0; a < n; a++)
 		{
-			mm = va_arg(argum, char *);
-			if (mm == NULL)
+			m = va_arg(argum, char *);
+			if (m == NULL)
 				printf("(nil)");
-			else
-				printf("%s", mm);
-			if ((a < n - 1) && separator != NULL)
-				printf("%s", separator);
+			printf("%s", m);
 		}
-
-		printf("\n");
-		va_end(argum);
 	}
+	else
+	{
+		for (a = 0; a < n; a++)
+		{
+			m = va_arg(argum, char *);
+			if (m == NULL)
+				printf("(nil)");
+			else if (a < n - 1)
+				printf("%s%s", m, separator);
+			else
+				printf("%s", m);
+		}
+	va_end(argum);
+	}
+	printf("\n");
 }
