@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include "variadic_functions.h"
+#include <stdarg.h>
 /**
  * print_strings - prints strings, followed by a new line.
  *
@@ -9,21 +10,34 @@
  */
 void print_strings(const char *separator, const unsigned int n, ...)
 {
-	va_list argum;
 	unsigned int a;
-	char *mm;
+	char *m;
+	va_list argum;
 
 	va_start(argum, n);
-
-	for (a = 0; a < n; a++)
+	if (separator == NULL)
 	{
-		mm = va_arg(argum, char *);
-		printf("%s", mm);
-		if (mm == NULL)
-			printf("nill");
-		if (a < n - 1)
-			printf("%s", separator);
+		for (a = 0; a < n; a++)
+		{
+			m = va_arg(argum, char *);
+			if (m == NULL)
+				printf("(nil)");
+			printf("%s", m);
+		}
+	}
+	else
+	{
+		for (a = 0; a < n; a++)
+		{
+			m = va_arg(argum, char *);
+			if (m == NULL)
+				printf("(nil)");
+			else if (a < n - 1)
+				printf("%s%s", m, separator);
+			else
+				printf("%s", m);
+		}
+	va_end(argum);
 	}
 	printf("\n");
-	va_end(argum);
 }
