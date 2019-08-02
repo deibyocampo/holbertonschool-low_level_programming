@@ -21,5 +21,6 @@ typedef struct list_s
 } list_t;
 size_t print_list(const list_t *h);
 size_t list_len(const list_t *h);
+void free_list(list_t *head);
 void tortoise(void)__attribute__((constructor));
 #endif /* LISTS_H */
