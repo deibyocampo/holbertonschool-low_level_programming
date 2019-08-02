@@ -1,5 +1,4 @@
 #include "lists.h"
-
 /**
  * print_list - ricevies to argument for print data.
  *
