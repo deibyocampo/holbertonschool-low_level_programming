@@ -1,9 +1,8 @@
 #include "lists.h"
 /**
+ * free_listint2 - free the memory of node in the list.
  *
- *
- *
- *
+ * @head: pointer to pointer.
  *
  */
 void free_listint2(listint_t **head)
@@ -21,6 +20,6 @@ void free_listint2(listint_t **head)
 			free(li);
 			li = ol;
 		}
-		*head = NULL;	
+		*head = NULL;
 	}
 }
