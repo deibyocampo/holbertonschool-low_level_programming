@@ -1,6 +1,6 @@
 #include "holberton.h"
 /**
- * binary_to_uint - converter number bynary a decimal.
+ * binary_to_uint - converter number binary a decimal.
  *
  * @b: pointer to string.
  *
