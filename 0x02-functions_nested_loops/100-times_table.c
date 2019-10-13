@@ -44,6 +44,6 @@ void print_times_table(int n)
 				_putchar(b % 10 + '0');
 			}
 		}
-		printf("\n");
+		_putchar('\n');
 	}
 }
