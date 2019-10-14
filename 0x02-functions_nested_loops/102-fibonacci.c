@@ -11,7 +11,7 @@ int main(void)
 
 	a = 1;
 	b = 2;
-	d = 0;
+	d = 1;
 
 	printf("%lu, ", a);
 	while (d < 50)
