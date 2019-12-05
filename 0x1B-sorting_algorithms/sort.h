@@ -28,5 +28,6 @@ int partition(int *array, int low, int high, size_t size);
 void super_quick_sort(int *array, int low, int high, size_t size);
 void swap(int *a, int *b);
 void quick_sort(int *array, size_t size);
+void shell_sort(int *array, size_t size);
 
 #endif
